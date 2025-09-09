@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game" role="main" aria-label="Rock Paper Scissors game">
+    <header>
+      <h1> Rock Paper Scissors </h1>
+    </header>
+
+    <section class="hands" aria-label="Player and computer hands">
+      <div id="player-hand" class="hand" aria-live="polite" aria-atomic="true">✊</div>
+      <div id="computer-hand" class="hand" aria-live="polite" aria-atomic="true">✊</div>
+    </section>
+
+    <p id="status" aria-live="polite">Let's Play!!</p>
+
+    <section class="choices" role="group" aria-label="Choose your move">
+      <button onclick="play('rock')" aria-pressed="false">✊ Rock</button>
+      <button onclick="play('paper')" aria-pressed="false">✋ Paper</button>
+      <button onclick="play('scissors')" aria-pressed="false">✌ Scissors</button>
+    </section>
+
+    <div class="scoreboard" aria-label="Scoreboard">
+      <div>Player: <span id="player-score">0</span></div>
+      <div>Computer: <span id="computer-score">0</span></div>
+    </div>
+
+    <div id="result" aria-live="polite"></div>
+
+    <button id="reset-btn" aria-label="Reset game">Reset Game</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
